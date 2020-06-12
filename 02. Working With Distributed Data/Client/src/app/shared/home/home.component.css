@@ -1,0 +1,29 @@
+.container-fluid {
+    padding: 0%;
+    overflow: hidden;
+}
+
+
+.box {
+    border: 1px solid grey;
+    margin: 2%;
+    position: relative;
+    height: 32rem;
+    padding: 5%;
+}
+
+.action {
+    position: absolute;
+    bottom: 0;
+    left: 0;   
+    margin: 5%;
+}
+
+.btn-primary {
+    background-color: #6c757d!important;
+}
+
+.container {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
