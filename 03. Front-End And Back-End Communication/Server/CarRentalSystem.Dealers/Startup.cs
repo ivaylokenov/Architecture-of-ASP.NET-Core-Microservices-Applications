@@ -1,6 +1,5 @@
 namespace CarRentalSystem.Dealers
 {
-    using CarRentalSystem.Infrastructure;
     using CarRentalSystem.Services;
     using Data;
     using Infrastructure;

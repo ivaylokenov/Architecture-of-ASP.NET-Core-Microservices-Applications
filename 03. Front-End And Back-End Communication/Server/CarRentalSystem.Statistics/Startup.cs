@@ -1,6 +1,5 @@
 namespace CarRentalSystem.Statistics
 {
-    using CarRentalSystem.Infrastructure;
     using CarRentalSystem.Services;
     using Data;
     using Infrastructure;
