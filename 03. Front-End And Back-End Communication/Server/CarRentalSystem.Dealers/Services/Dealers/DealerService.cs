@@ -1,6 +1,7 @@
 ﻿namespace CarRentalSystem.Dealers.Services.Dealers
 {
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Linq.Expressions;
     using System.Threading.Tasks;
@@ -31,6 +32,11 @@
                 .All()
                 .AnyAsync(d => d.UserId == userId);
 
+        public async Task<IEnumerable<DealerDetailsOutputModel>> GetAll()
+            => await this.mapper
+                .ProjectTo<DealerDetailsOutputModel>(this.All())
+                .ToListAsync();
+                
         public async Task<DealerDetailsOutputModel> GetDetails(int id)
             => await this.mapper
                 .ProjectTo<DealerDetailsOutputModel>(this
@@ -52,6 +58,9 @@
         public Task<Dealer> FindByUser(
             string userId)
             => this.FindByUser(userId, dealer => dealer);
+
+        public async Task<Dealer> FindById(int id)
+            => await this.Data.FindAsync<Dealer>(id);
 
         private async Task<T> FindByUser<T>(
             string userId,

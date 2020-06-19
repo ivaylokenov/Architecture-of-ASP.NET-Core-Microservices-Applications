@@ -42,8 +42,9 @@
             this IServiceCollection services,
             IConfiguration configuration)
             => services
-                .Configure<ApplicationSettings>(configuration
-                    .GetSection(nameof(ApplicationSettings)));
+                .Configure<ApplicationSettings>(
+                    configuration.GetSection(nameof(ApplicationSettings)), 
+                    config => config.BindNonPublicProperties = true);
 
         public static IServiceCollection AddTokenAuthentication(
             this IServiceCollection services,

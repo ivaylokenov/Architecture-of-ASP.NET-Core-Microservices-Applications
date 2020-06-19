@@ -1,0 +1,34 @@
+﻿@model DealerFormModel
+
+@{
+    ViewData["Title"] = "Edit Dealer";
+}
+
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <h2>Edit Dealer</h2>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-4 offset-lg-4">
+        <form asp-controller="Dealers" asp-action="Edit" method="post">
+            <div asp-validation-summary="ModelOnly"></div>
+            <div class="form-group">
+                <label asp-for="Name"></label>
+                <input asp-for="Name" class="form-control" id="name" placeholder="Enter name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber"></label>
+                <input asp-for="PhoneNumber" class="form-control" id="phone-number" placeholder="Enter phone number">
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <button type="submit" class="btn btn-primary">Save</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

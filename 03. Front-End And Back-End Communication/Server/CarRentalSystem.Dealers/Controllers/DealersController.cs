@@ -1,9 +1,11 @@
 ﻿namespace CarRentalSystem.Dealers.Controllers
 {
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using CarRentalSystem.Services;
     using CarRentalSystem.Services.Identity;
     using Data.Models;
+    using Infrastructure;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Models.Dealers;
@@ -64,7 +66,9 @@
         [Route(Id)]
         public async Task<ActionResult> Edit(int id, EditDealerInputModel input)
         {
-            var dealer = await this.dealers.FindByUser(this.currentUser.UserId);
+            var dealer = this.currentUser.IsAdministrator
+                ? await this.dealers.FindById(id)
+                : await this.dealers.FindByUser(this.currentUser.UserId);
 
             if (id != dealer.Id)
             {
@@ -78,5 +82,10 @@
 
             return Ok();
         }
+
+        [HttpGet]
+        [AuthorizeAdministrator]
+        public async Task<IEnumerable<DealerDetailsOutputModel>> All()
+            => await this.dealers.GetAll();
     }
 }

@@ -1,8 +1,8 @@
 namespace CarRentalSystem.Dealers
 {
+    using Infrastructure;
     using CarRentalSystem.Services;
     using Data;
-    using Infrastructure;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;

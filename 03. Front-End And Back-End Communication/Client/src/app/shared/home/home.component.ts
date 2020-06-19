@@ -22,11 +22,11 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     this.carsService.getCategories().subscribe(res => {
       this.categories = res;
-    })
+    });
 
     this.statisticsService.getStatistics().subscribe(res => {
       this.statistics = res;
-    })
+    });
   }
 
   goToCars(id) {

@@ -14,7 +14,9 @@
         private readonly UserManager<User> userManager;
         private readonly ITokenGeneratorService jwtTokenGenerator;
 
-        public IdentityService(UserManager<User> userManager, ITokenGeneratorService jwtTokenGenerator)
+        public IdentityService(
+            UserManager<User> userManager, 
+            ITokenGeneratorService jwtTokenGenerator)
         {
             this.userManager = userManager;
             this.jwtTokenGenerator = jwtTokenGenerator;
@@ -51,7 +53,9 @@
                 return InvalidErrorMessage;
             }
 
-            var token = this.jwtTokenGenerator.GenerateToken(user);
+            var roles = await this.userManager.GetRolesAsync(user);
+
+            var token = this.jwtTokenGenerator.GenerateToken(user, roles);
 
             return new UserOutputModel(token);
         }
