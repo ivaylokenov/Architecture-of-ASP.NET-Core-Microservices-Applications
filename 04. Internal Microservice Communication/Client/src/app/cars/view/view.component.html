@@ -1,0 +1,18 @@
+<div class="container" *ngIf="car">
+    <div class="row">
+        <div class="col-lg-6" style="border-right: 3px solid darkgrey;">
+            <img [src]="car.imageUrl" alt="Car image">
+        </div>
+        <div class="col-lg-6">
+            <div><h3>Manufacturer:</h3><label>{{ car.manufacturer }}</label></div>
+            <div><h3>Model: </h3><label>{{ car.model }}</label></div>
+            <div><h3>Category:</h3><label>{{ car.category }}</label></div>
+            <div><h3>Price per Day:</h3> <label>{{ car.pricePerDay }}</label></div>
+            <div><h3>Climate Control:</h3> <label>{{ car.hasClimateControl ? 'Yes' : 'No' }}</label></div>
+            <div><h3>Number of seats:</h3> <label>{{ car.numberOfSeats }}</label></div>
+            <div><h3>Dealer phone: </h3><label>{{ car.transmissionType }}</label></div>
+            <div><h3>Dealer name: </h3><label>{{ car.dealer.name }}</label></div>
+            <div><h3>Dealer phone: </h3><label>{{ car.dealer.phoneNumber }}</label></div>
+        </div>
+    </div>
+</div>

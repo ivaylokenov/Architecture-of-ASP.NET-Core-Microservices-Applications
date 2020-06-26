@@ -1,0 +1,17 @@
+<form [formGroup]="sortForm">
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Sort by: </label>
+        <select class="form-control" formControlName="sortBy" (change)="sort()">
+          <option value="date">Date</option>
+          <option value="price">Price</option>
+          <option value="manufacturer">Manufacturer</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlInput1">Order: </label>
+        <select class="form-control" formControlName="order" (change)="sort()">
+          <option value="asc">Ascending</option>
+          <option value="desc">Descending</option>
+        </select>
+    </div>
+</form>
