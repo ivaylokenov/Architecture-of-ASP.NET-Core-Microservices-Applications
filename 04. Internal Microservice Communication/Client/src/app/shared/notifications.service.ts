@@ -28,7 +28,7 @@ export class NotificationsService {
 
         this.hubConnection.on('ReceiveNotification', (data) => {
             console.log(data);
-            this.toastr.success("New Car!", `A new car! ${data.manufacturer}`);
+            this.toastr.success(`A new car - ${data.manufacturer} ${data.model} for just ${data.pricePerDay}!!!`, "New Car!");
         });
     }
 }

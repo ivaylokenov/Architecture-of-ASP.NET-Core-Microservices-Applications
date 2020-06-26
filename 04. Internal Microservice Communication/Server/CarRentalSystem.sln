@@ -13,9 +13,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalSystem.Statistics"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalSystem.Schedule", "CarRentalSystem.Schedule\CarRentalSystem.Schedule.csproj", "{FF08B106-9D3E-4B34-8F83-3DD49C625EA8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalSystem.Admin", "CarRentalSystem.Admin\CarRentalSystem.Admin.csproj", "{79784DBE-4B2B-436C-AEB9-FB02607FF985}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalSystem.Admin", "CarRentalSystem.Admin\CarRentalSystem.Admin.csproj", "{79784DBE-4B2B-436C-AEB9-FB02607FF985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalSystem.Dealers.Gateway", "CarRentalSystem.Dealers.Gateway\CarRentalSystem.Dealers.Gateway.csproj", "{649D8B01-A363-493E-A396-6FD2822429E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CarRentalSystem.Dealers.Gateway", "CarRentalSystem.Dealers.Gateway\CarRentalSystem.Dealers.Gateway.csproj", "{649D8B01-A363-493E-A396-6FD2822429E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarRentalSystem.Notifications", "CarRentalSystem.Notifications\CarRentalSystem.Notifications.csproj", "{9736CF21-3A7D-40C6-A463-DA49B633F55A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{649D8B01-A363-493E-A396-6FD2822429E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{649D8B01-A363-493E-A396-6FD2822429E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{649D8B01-A363-493E-A396-6FD2822429E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9736CF21-3A7D-40C6-A463-DA49B633F55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9736CF21-3A7D-40C6-A463-DA49B633F55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9736CF21-3A7D-40C6-A463-DA49B633F55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9736CF21-3A7D-40C6-A463-DA49B633F55A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

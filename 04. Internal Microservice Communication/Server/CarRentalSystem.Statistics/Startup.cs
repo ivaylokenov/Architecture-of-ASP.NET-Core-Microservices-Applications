@@ -3,6 +3,8 @@ namespace CarRentalSystem.Statistics
     using Infrastructure;
     using CarRentalSystem.Services;
     using Data;
+    using MassTransit;
+    using Messages;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -22,7 +24,8 @@ namespace CarRentalSystem.Statistics
                 .AddWebService<StatisticsDbContext>(this.Configuration)
                 .AddTransient<IDataSeeder, StatisticsDataSeeder>()
                 .AddTransient<IStatisticsService, StatisticsService>()
-                .AddTransient<ICarAdViewService, CarAdViewService>();
+                .AddTransient<ICarAdViewService, CarAdViewService>()
+                .AddMessaging(typeof(CarAdCreatedConsumer));
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
             => app

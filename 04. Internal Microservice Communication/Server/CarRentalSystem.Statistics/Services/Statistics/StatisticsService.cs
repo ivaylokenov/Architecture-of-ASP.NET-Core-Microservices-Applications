@@ -23,5 +23,13 @@
                 .ProjectTo<StatisticsOutputModel>(this.All())
                 .SingleOrDefaultAsync();
 
+        public async Task AddCarAd()
+        {
+            var statistics = await this.All().SingleOrDefaultAsync();
+
+            statistics.TotalCarAds++;
+
+            await this.Data.SaveChangesAsync();
+        }
     }
 }

@@ -5,6 +5,8 @@
     using CarRentalSystem.Services;
     using CarRentalSystem.Services.Identity;
     using Data.Models;
+    using MassTransit;
+    using Messages.Dealers;
     using Microsoft.AspNetCore.Authorization;
     using Microsoft.AspNetCore.Mvc;
     using Models.CarAds;
@@ -21,19 +23,22 @@
         private readonly ICategoryService categories;
         private readonly IManufacturerService manufacturers;
         private readonly ICurrentUserService currentUser;
+        private readonly IBus publisher;
 
         public CarAdsController(
             ICarAdService carAds, 
             IDealerService dealers,
             ICategoryService categories,
             IManufacturerService manufacturers,
-            ICurrentUserService currentUser)
+            ICurrentUserService currentUser,
+            IBus publisher)
         {
             this.carAds = carAds;
             this.dealers = dealers;
             this.categories = categories;
             this.manufacturers = manufacturers;
             this.currentUser = currentUser;
+            this.publisher = publisher;
         }
 
         [HttpGet]
@@ -90,6 +95,14 @@
 
             await this.carAds.Save(carAd);
 
+            await this.publisher.Publish(new CarAdCreatedMessage
+            {
+                CarAdId = carAd.Id,
+                Manufacturer = carAd.Manufacturer.Name,
+                Model = carAd.Model,
+                PricePerDay = carAd.PricePerDay
+            });
+
             return new CreateCarAdOutputModel(carAd.Id);
         }
 
@@ -131,6 +144,13 @@
             };
 
             await this.carAds.Save(carAd);
+
+            await this.publisher.Publish(new CarAdUpdatedMessage
+            {
+                CarAdId = carAd.Id,
+                Manufacturer = carAd.Manufacturer.Name,
+                Model = carAd.Model
+            });
 
             return Result.Success;
         }

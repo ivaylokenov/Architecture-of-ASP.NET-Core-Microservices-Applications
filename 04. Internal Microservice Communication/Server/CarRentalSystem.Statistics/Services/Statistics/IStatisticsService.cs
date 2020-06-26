@@ -6,5 +6,7 @@
     public interface IStatisticsService
     {
         Task<StatisticsOutputModel> Full();
+
+        Task AddCarAd();
     }
 }
