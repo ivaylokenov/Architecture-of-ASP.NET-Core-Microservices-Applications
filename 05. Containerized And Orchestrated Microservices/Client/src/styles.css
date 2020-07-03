@@ -1,0 +1,27 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~ngx-toastr/toastr';
+
+
+
+form {
+    border: 1px solid gray;
+    margin: 10%;
+    padding: 5% 5%;
+}
+
+button:disabled {
+    cursor: not-allowed;
+}
+
+h3 {
+    color: #555b61!important;
+}
+
+label {
+    color: #555b61!important;
+}
+
+.card img {
+    width: 100%;
+    height: 12rem;      
+}

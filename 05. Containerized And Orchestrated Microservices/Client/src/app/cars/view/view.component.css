@@ -1,0 +1,15 @@
+img {
+    width: 100%;
+}
+
+h3 {
+    display: inline-block;
+}
+label {
+    margin-left: 5%;
+    font-size: 1.5rem;
+}
+
+.container {
+    margin-top: 2%;
+}
