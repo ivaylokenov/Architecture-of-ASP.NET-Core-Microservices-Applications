@@ -1,0 +1,33 @@
+<div class="container-fluid">
+
+    <div class="row" *ngIf="cars && cars.length != 0; else noCars">
+      <div class="col-lg-3">
+        <app-search (emitter)="assignCars($event)"></app-search>
+      </div>
+        <div class="col-lg-2" *ngFor="let c of cars">
+            <div class="card">
+                <img [src]="c.imageUrl" class="card-img-top" alt="Car image">
+                <div class="card-body">
+                  <h5 class="card-title">{{ c.manufacturer }}</h5>
+                  <p class="card-text">{{ c.pricePerDay }}</p>
+                  <a routerLink="/cars/{{c.id}}" class="btn btn-primary">Details</a>
+                </div>
+              </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-3"></div>
+      <div class="col-lg-3">      
+        <app-pagination [queryString]="" (emitter)="assignCars($event)"></app-pagination>
+      </div>
+      <div class="col-lg-3"></div>
+    </div>
+    <ng-template class="row" #noCars>
+      <h1>No cars found</h1>
+    </ng-template>
+  
+</div>
+
+
+

@@ -1,0 +1,14 @@
+label {
+    margin-right: 2%;
+}
+
+input[number] {
+    width: 50%;
+}
+
+form {
+    margin: 0% 1%;
+    border: none;
+    border-right: 1px solid gray;
+    padding-top: 0%;
+}

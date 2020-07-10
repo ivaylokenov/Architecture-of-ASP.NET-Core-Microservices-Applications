@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form [formGroup]="carForm" (ngSubmit)="edit()">
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Manufacturer</label>
+                  <input type="text" class="form-control" formControlName="manufacturer">
+                </div>
+                <div class="form-group">
+                  <label >Model</label>
+                  <input type="text" class="form-control" formControlName="model">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1">Select category</label>
+                  <select class="form-control" formControlName="category">
+                    <option *ngFor="let c of categories" [value]="c.id">{{c.name}}</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <img [src]="imageUrl" alt="">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Car's image url</label>
+                  <input type="text" class="form-control" formControlName="imageUrl">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Price per day</label>
+                  <input type="number" class="form-control" formControlName="pricePerDay">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Climate Control</label>
+                  <select class="form-control" formControlName="hasClimateControl">
+                    <option  [value]="true">Yes</option>
+                    <option  [value]="false">No</option>
+                  </select>              
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Number of seats</label>
+                  <input type="number" class="form-control" formControlName="numberOfSeats">
+                </div>  
+                <div class="form-group">
+                  <label for="exampleFormControlInput1">Transmission type</label>
+                  <select class="form-control" formControlName="transmissionType">
+                    <option  [ngValue]="1">Manual</option>
+                    <option  [ngValue]="2">Automatic</option>
+                  </select>              
+                </div>
+                <button class="btn btn-primary" type="submit">Edit</button>
+              </form>
+        </div>
+    </div>
+</div>
