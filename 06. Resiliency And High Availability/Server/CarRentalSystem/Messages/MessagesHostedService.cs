@@ -48,7 +48,7 @@
 
             foreach (var message in messages)
             {
-                this.publisher.Publish(message.Data, message.Type);
+                this.publisher.Publish(message.Data, message.Type).GetAwaiter().GetResult();
 
                 message.MarkAsPublished();
 
