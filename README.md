@@ -1,6 +1,6 @@
 # Architecture of ASP.NET Core Microservices Applications
 
-This repository contains the demo source code from my [SoftUni course](https://softuni.bg/trainings/2999/architecture-of-asp-dot-net-core-microservices-applications-june-2020) about ASP.NET Core microservices architecture.
+This repository contains the demo source code from my [SoftUni course](https://softuni.bg/trainings/3534/architecture-of-asp-dot-net-core-microservices-applications-september-2021) about ASP.NET Core microservices architecture.
 
 If you'd like to support me and my projects, please consider:
 
@@ -17,4 +17,4 @@ If you'd like to support me and my projects, please consider:
 
 Additional resources:
 
-- My YouTube channel is a great place to learn advanced C# concepts. Make sure you subscribe and turn on the bell notifications: https://www.youtube.com/MyTestedASPNETTV
+- My YouTube channel is a great place to learn advanced C# concepts. Make sure you subscribe and turn on the bell notifications: https://www.youtube.com/channel/UCP5Ons7fK3yKhX6lhc9XcfQ
