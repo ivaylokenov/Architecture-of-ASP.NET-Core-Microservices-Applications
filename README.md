@@ -8,7 +8,7 @@ If you'd like to support me and my projects, please consider:
 - [Become a backer or sponsor on OpenCollective](https://opencollective.com/mytestedaspnet)
 - [One-time donation via PayPal](http://paypal.me/ivaylokenov)
 - [One-time donation via Buy Me A Coffee](http://buymeacoff.ee/ivaylokenov)
-- One-time donation via Revolut: @ivaylowrlt
+- One-time donation via Revolut: @ivaylokenov
 - One-time donation via cryptocurrencies:
   - BTC (Bitcoin) - 3P49XMiGXxqR2Dq1HdqHpkCa6UD848rpBU 
   - BCH (Bitcoin Cash) - qqgyjlvmuydf6gtfhfdypyw2u8utmc3uqg4nwma3y4
