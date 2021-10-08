@@ -17,4 +17,4 @@ If you'd like to support me and my projects, please consider:
 
 Additional resources:
 
-- My YouTube channel is a great place to learn advanced C# concepts. Make sure you subscribe and turn on the bell notifications: https://www.youtube.com/channel/UCP5Ons7fK3yKhX6lhc9XcfQ
+- My YouTube channel is a great place to learn advanced C# concepts. Make sure you subscribe and turn on the bell notifications: https://www.youtube.com/c/CodeItUpWithIvo
